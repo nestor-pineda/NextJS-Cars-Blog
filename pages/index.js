@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import CarCard from "../components/CarCard";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -6,19 +7,30 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "recipe" });
+  const res = await client.getEntries({ content_type: "carProfiles" });
 
   return {
     props: {
-      recipes: res.items,
+      carProfiles: res.items,
     },
   };
 }
 
-export default function Recipes({ recipes }) {
-  console.log(recipes);
+export default function carProfiles({ carProfiles }) {
+  console.log(carProfiles);
 
-  return <div className="recipe-list">Recipe List</div>;
+  return (
+    <div className="car-profiles-list">
+      {carProfiles.map((item) => {
+        return <CarCard key={item.sys.id} item={item} />;
+      })}
+      <style jsx>{`
+        .car-profiles-list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 20px 60px;
+        }
+      `}</style>
+    </div>
+  );
 }
-
-// then we return the res object and with props we pass the items to our recepies component.
