@@ -71,7 +71,7 @@ export default function RecipeDetails({ carProfiles }) {
           margin: 0;
           background: #fff;
           display: inline-block;
-          padding: 20px;
+          padding: 19px;
           position: relative;
           top: -60px;
           left: -10px;
