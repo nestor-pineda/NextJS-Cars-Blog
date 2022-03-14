@@ -30,6 +30,15 @@ export const getStaticProps = async ({ params }) => {
     "fields.slug": params.slug,
   });
 
+  if (!items.lenght) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: { carProfiles: items[0] },
     revalidate: 1, //  Time in second at most Next will regenerate the page
