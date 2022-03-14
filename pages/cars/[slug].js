@@ -45,27 +45,6 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-/* export const getStaticProps = async ({ params }) => {
-  const { items } = await client.getEntries({
-    content_type: "carProfiles",
-    "fields.slug": params.slug,
-  });
-
-    if (!items.lenght) {
-    return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: { carProfiles: items[0] },
-    revalidate: 1, //  Time in second at most Next will regenerate the page
-  };
-}; */
-
 export default function RecipeDetails({ carProfiles }) {
   if (!carProfiles) return <div>Loading</div>;
 
