@@ -13,6 +13,7 @@ export async function getStaticProps() {
     props: {
       carProfiles: res.items,
     },
+    revalidate: 1,
   };
 }
 
