@@ -58,7 +58,7 @@ export default function RecipeDetails({ carProfiles }) {
       </div>
 
       <div className="method">
-        <h3>Method:</h3>
+        <h3>Description:</h3>
         <div>{documentToReactComponents(body)}</div>
       </div>
 
