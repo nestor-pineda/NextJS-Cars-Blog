@@ -30,14 +30,14 @@ export const getStaticProps = async ({ params }) => {
     "fields.slug": params.slug,
   });
 
-  if (!items.lenght) {
+  /*   if (!items.lenght) {
     return {
       redirect: {
         destination: "/",
         permanent: false,
       },
     };
-  }
+  } */
 
   return {
     props: { carProfiles: items[0] },
