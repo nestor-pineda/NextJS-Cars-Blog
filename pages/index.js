@@ -29,7 +29,7 @@ export default function carProfiles({ carProfiles }) {
         .car-profiles-list {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          grid-gap: 20px 60px;
+          grid-gap: 45px 60px;
         }
       `}</style>
     </div>
