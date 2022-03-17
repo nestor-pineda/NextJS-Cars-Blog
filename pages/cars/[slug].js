@@ -71,6 +71,9 @@ export default function RecipeDetails({ carProfiles }) {
       </div>
 
       <style jsx>{`
+        * {
+          color: #fff;
+        }
         h2,
         h3 {
           text-transform: uppercase;
@@ -78,6 +81,7 @@ export default function RecipeDetails({ carProfiles }) {
         .banner h2 {
           margin: 0;
           background: #fff;
+          color: #010101;
           display: inline-block;
           padding: 19px;
           position: relative;
@@ -86,14 +90,21 @@ export default function RecipeDetails({ carProfiles }) {
           transform: rotateZ(-1deg);
           box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
         }
+        h3 {
+          color: #fff;
+        }
         .info p {
           margin: 0;
+          color: #fff;
         }
         .info span::after {
           content: ", ";
         }
         .info span:last-child::after {
           content: ".";
+        }
+        p {
+          color: #fff !important;
         }
       `}</style>
     </div>

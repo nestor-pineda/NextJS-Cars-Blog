@@ -12,7 +12,6 @@ const CarCard = ({ item }) => {
       <div className="content">
         <div className="info">
           <h4>{title}</h4>
-          <p></p>
         </div>
       </div>
       <div className="actions">
@@ -44,7 +43,9 @@ const CarCard = ({ item }) => {
           color: #777;
         }
         .actions {
-          margin-top: 20px;
+          position: absolute;
+          margin-top: -52px;
+          right: 0px;
           display: flex;
           justify-content: flex-end;
         }
